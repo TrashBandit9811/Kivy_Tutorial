@@ -1,0 +1,43 @@
+#:import utils kivy.utils
+
+<MyGridLayout>
+
+	name: name
+	composer: composer
+	piece: piece
+
+	GridLayout:
+		cols:1
+		size: root.width, root.height
+
+		GridLayout:
+			cols:2
+
+			Label:
+				text:"Name"
+			TextInput:
+				id: name
+				multiline:False
+				background_color:utils.get_color_from_hex('#BB86FC')
+
+			Label:
+				text:"Fave Composer"
+			TextInput:
+				id: composer
+				multiline:False
+				background_color:utils.get_color_from_hex('#03DAC6')
+
+			Label:
+				text:"Fave Piece"
+			TextInput:
+				id: piece
+				multiline:False
+				background_color:utils.get_color_from_hex('#BB86FC')
+
+		Button:
+			text: "Submit"
+			font_size: 32
+			on_press: root.press()
+			background_normal:''
+			#background_color: (52/255.0,152/255.0,219/255.0,1)
+			background_color:utils.get_color_from_hex('#1E1E1E')
